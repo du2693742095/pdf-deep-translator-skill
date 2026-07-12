@@ -1,0 +1,22 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+
+# Python/cache artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local secrets and tokens
+.env
+*.env
+*.token
+tokens.json
+mineru*.json
+
+# Generated extraction/translation outputs
+outputs/
+work/
+*.log

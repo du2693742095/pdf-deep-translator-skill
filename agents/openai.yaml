@@ -1,0 +1,4 @@
+interface:
+  display_name: "PDF Deep Translator"
+  short_description: "Extract PDFs to Markdown and translate them deeply in chunks."
+  default_prompt: "Extract this PDF into Markdown with preserved structure, tables, and images, then translate it accurately into Chinese in chunks."
