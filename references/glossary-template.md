@@ -1,13 +1,34 @@
-# Glossary Template For Compression And Resume
+# Glossary Template For Domain-Specific Translation
 
-Use this compact format when translating long technical PDFs and context may be compressed.
+Use this format when generating a domain-specific glossary for translation tasks.
 
-| Source term | Translation | Note / definition |
+## Terminology Classification Rules
+
+| Category | Action | Examples |
 |---|---|---|
-| scan chain | 扫描链 | Serial chain used for shift access. |
-| retargeting | 重定向 | Translating lower-level instrument procedures to a target module/interface. |
-| instrument | 仪器 | IEEE 1687 instrument or test/access target. |
-| capture-shift-update (CSU) | 捕获-移位-更新（CSU） | Scan operation sequence. |
-| active scan chain | 活动扫描链 | Currently selected scan path. |
+| Abbreviations / acronyms | **Keep English**, add Chinese annotation | ICL（仪器连接语言）, CPU（中央处理器）, API |
+| ALL-CAPS terms / standard names | **Keep English** | IEEE 1687, Verilog, VHDL, Linux |
+| Tool / product names | **Keep English** | Tessent Shell, Synopsys DC, Cadence |
+| Code / commands / file paths | **Keep English** | `set_context patterns -ijtag`, `*.v` |
+| Technical terms (lowercase/mixed) | **Translate**, keep English in parentheses | scan chain（扫描链）, cache（缓存） |
+| Domain-specific verbs/nouns | **Translate**, keep English in parentheses | capture（捕获）, shift（移位） |
 
-Keep only terms that affect consistency or professional meaning. Remove translated prose; keep progress markers separately.
+## Glossary Table Format
+
+| English Term | 中文翻译 | Category | Note |
+|---|---|---|---|
+| ICL | ICL（仪器连接语言） | abbreviation | Instrument Connectivity Language |
+| scan chain | 扫描链 | technical term | Serial chain used for shift access. |
+| retargeting | 重定向 | technical term | Translating lower-level instrument procedures to a target module/interface. |
+| Tessent Shell | Tessent Shell | tool name | Siemens EDA tool |
+| IEEE 1687 | IEEE 1687 | standard name | IJTAG standard |
+| capture | 捕获 | domain verb | Scan operation |
+| plug-and-play | 即插即用 | technical term | Hot-plug capability |
+
+## Notes
+
+- Only include terms that appear in the source document.
+- Remove terms that are not relevant to the specific document being translated.
+- Present the glossary to the user for confirmation before starting translation.
+- The glossary file should be saved at `./glossary.md`.
+- Sub-agent tasks should read this file for terminology reference.
